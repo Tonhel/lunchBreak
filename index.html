@@ -45,8 +45,9 @@
 
 <body style='margin : 0px; overflow: hidden;'>
     <div class="arjs-loader">
-        <div>Loading?? better wait...</div>
+        <div>Loading...</div>
     </div>
+
     <a-scene
         vr-mode-ui="enabled: false;"
         renderer='antialias: true; alpha: true; precision: mediump;'
@@ -55,7 +56,7 @@
         <a-assets>
             <video 
                 src="https://github.com/Tonhel/lunchBreak/blob/main/video/EdiblePrototype_2.mp4"
-                preload="auto" id="vid" response-type="arraybuffer" loop
+                preload="auto" id="vid" response-type="arraybuffer" loop="true"
                 crossorigin webkit-playsinline autoplay muted="false" playsinline>
             </video>
         </a-assets>
@@ -63,8 +64,8 @@
         <a-nft
             videohandler
             type='nft' url='https://github.com/Tonhel/lunchBreak/tree/main/trackImage/test'
-            smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5"
-        >
+            smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5">
+            
             <a-video
                 src="#vid"
                 position='50 150 -100'
